@@ -1,0 +1,108 @@
+
+.main-header {
+    background-color: #111;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+  }
+
+ 
+
+  nav {
+    background-color: #201c02;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 40px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    color: #ff6600;
+  }
+
+  section {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  section h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: #333;
+  }
+
+  footer {
+    background-color: #4CAF50;
+    color: #000;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+  }
+  
+
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+      gap: 15px;
+    }
+    body, footer{
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+  }
+  
+  .mascotas-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+    padding: 20px;
+  }
+ 
+table {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 300px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background-color: #fff;
+    flex-wrap: wrap;
+    margin: 30%;
+    
+  }
+ 
+  .mascota-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin-bottom: 10px;
+  }
+ 
+  .mascota-card h4 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #333;
+  }
+ 
+  .mascota-card p {
+    margin: 5px 0;
+    color: #666;
+    font-family: 'Times New Roman', Times, serif;
+  }
+ 

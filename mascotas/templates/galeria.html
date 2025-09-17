@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mascotas</title>
+    <!-- si usas Bootstrap -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+<body class="container mt-5">
+    <nav>
+        <ul>
+          <li><a href="#">INICIO</a></li>
+          <li><a href="#">GALERIA </a></li>
+          <li><a href="#">FORMULARIO</a></li>
+          <li><a href="#">QUIÉNES SOMOS</a></li>
+        </ul>
+      </nav>
+    <section class="imagen">
+        <h1>Galeria de imagenes</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum reiciendis quam eaque quaerat repellendus dolore esse. Quod ab, perferendis porro neque, magni officiis amet dolorem at aliquam fuga voluptatem perspiciatis!</p>
+
+
+    {% if mascotas %}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+   
+                <th>nombre</th>
+                <th>raza</th>
+                <th>descripcion</th>
+                <th>Foto</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            {% for emp in mascotas %}
+            <tr>
+                <td>{{ emp.nombre }}</td>
+                <td>{{ emp.raza }}</td>
+                <td>{{ emp.descripcion }}</td>
+                <td><img  src="{% static 'images/'%}{{ emp.foto }}" width="100px" height="auto" alt="perro">
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+        <div class="alert alert-info">No hay perros registrados</div>
+    {% endif %}
+    
+    
+</body>
+<footer>
+    <h2>Mis Perris</h2>
+</footer>
+</html>
