@@ -1,0 +1,28 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}?v=1">
+</head>
+<body>
+      <nav>
+    <h1>🐾 Mis Perris</h1>
+    <ul>
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#">Galeria</a></li>
+      <li><a href="{% url 'registro' %}">Registro</a></li>
+      <li><a href="#">Quienes Somos</a></li>
+    </ul>
+  </nav>
+  
+  <h2>Crear cuenta</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Registrarse</button>
+  </form>
+</body>
+</html>

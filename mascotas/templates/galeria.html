@@ -14,10 +14,19 @@
     <ul>
       <li><a href="#">Inicio</a></li>
       <li><a href="#">Galeria</a></li>
-      <li><a href="#">Formulario</a></li>
+      <li><a href="{% url 'registro' %}">Registro</a></li>
       <li><a href="#">Quienes Somos</a></li>
     </ul>
   </nav>
+
+  <!-- SECCIÓN DE PORTADA -->
+<header class="hero">
+  <div class="hero-text">
+    <h1>Mascotas Felices en Mis Perris</h1>
+    <p>¿Cuál es la mejor mascota para usted?</p>
+    <a href="#" class="btn">Leer Más</a>
+  </div>
+</header>
 
   <section class="imagen">
     <h1>Galería de Imágenes</h1>
@@ -27,7 +36,11 @@
       {% for emp in mascotas %}
       <div class="card-perro">
         <img src="{% static 'images/' %}{{ emp.foto }}" alt="{{ emp.nombre }}">
-        <h2>{{ emp.nombre }}</h2>
+        <h2>Nombre</h2>
+        <td>{{ emp.nombre }}</td>
+        <h2>Raza</h2>
+        <td>{{ emp.raza }}</td>
+
       </div>
       {% endfor %}
     </div>

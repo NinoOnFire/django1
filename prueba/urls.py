@@ -20,5 +20,6 @@ from mascotas import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('galeria/', views.galeria)
+    path('galeria/', views.galeria, name="galeria"),
+    path("registro/", views.registro, name="registro"),
 ]

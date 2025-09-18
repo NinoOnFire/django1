@@ -102,3 +102,82 @@ nav ul li a:hover {
   font-size: 16px;
   font-family: 'Comic Sans MS', cursive, sans-serif;
 }
+
+
+/* HERO con imagen de fondo */
+.hero {
+  background-image: url("images/perro-header.jpg"); /* Cambia por tu imagen */
+  background-size: cover;   /* Que cubra todo el ancho */
+  background-position: center;
+  height: 400px;            /* Altura de la sección */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+/* Oscurecer un poco la imagen para que se lean los textos */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0,0,0,0.4); /* sombra oscura transparente */
+}
+
+.hero-text {
+  position: relative;
+  z-index: 1; /* Para que quede sobre la sombra */
+}
+
+.hero-text h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 1.2em;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: 2px solid white;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: white;
+  color: black;
+}
+
+.hero {
+  background-image: url("/static/images/tengo-un-perro-sh.jpg"); /* ajusta la ruta */
+  background-size: 1600px 500px; /* ancho x alto */
+  background-position: center; /* centrada */
+  height: 400px;               /* altura del header */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+  background-repeat: no-repeat; /* evita que se repita */
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.4); /* oscurece un poco la imagen */
+}
+
+.hero-text {
+  position: relative;
+  z-index: 1; /* para que el texto no quede debajo de la sombra */
+}
