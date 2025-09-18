@@ -2,54 +2,36 @@
 {% load static %}
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mascotas</title>
-
-    <!-- Bootstrap (opcional si lo usas) -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-
-    <!-- Tu CSS -->
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mis Perris</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}?v=1">
 </head>
-</head>
-<body class="container mt-5">
+<body>
+
   <nav>
+    <h1>🐾 Mis Perris</h1>
     <ul>
-      <li><a href="#">INICIO</a></li>
-      <li><a href="#">GALERIA</a></li>
-      <li><a href="#">FORMULARIO</a></li>
-      <li><a href="#">QUIÉNES SOMOS</a></li>
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#">Galeria</a></li>
+      <li><a href="#">Formulario</a></li>
+      <li><a href="#">Quienes Somos</a></li>
     </ul>
   </nav>
 
   <section class="imagen">
-    <h1>Galería de imágenes</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum reiciendis quam eaque quaerat repellendus dolore esse.</p>
+    <h1>Galería de Imágenes</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam, obcaecati ratione itaque...</p>
 
-    {% if mascotas %}
     <div class="galeria">
       {% for emp in mascotas %}
       <div class="card-perro">
-        <img src="{% static 'images/' %}{{ emp.foto }}" alt="perro {{ emp.nombre }}">
-        <div class="info">
-          <h2>{{ emp.nombre }}</h2>
-          <p><strong>Raza:</strong> {{ emp.raza }}</p>
-          <p>{{ emp.descripcion }}</p>
-        </div>
+        <img src="{% static 'images/' %}{{ emp.foto }}" alt="{{ emp.nombre }}">
+        <h2>{{ emp.nombre }}</h2>
       </div>
       {% endfor %}
     </div>
-    {% else %}
-    <div class="alert alert-info">No hay perros registrados</div>
-    {% endif %}
   </section>
-</body>
 
-    
-    
 </body>
-<footer>
-    <h2>Mis Perris</h2>
-</footer>
 </html>

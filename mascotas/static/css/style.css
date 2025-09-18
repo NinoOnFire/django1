@@ -1,81 +1,104 @@
+/* Reset básico */
 body {
+  margin: 0;
   font-family: Arial, sans-serif;
-  background: #fdfdfd;
+  background: #fff;
+  color: #333;
+}
+
+/* Navbar */
+nav {
+  background: #333;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+}
+
+nav h1 {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
   margin: 0;
   padding: 0;
 }
 
-/* Estilo del menú */
-nav {
-  background: #ff9800;
-  padding: 10px;
-}
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  margin: 0;
-  padding: 0;
-}
 nav ul li {
-  margin: 0 15px;
+  margin-left: 25px;
 }
+
 nav ul li a {
   text-decoration: none;
   color: white;
   font-weight: bold;
 }
+
 nav ul li a:hover {
-  text-decoration: underline;
+  color: #ff9800;
 }
 
-/* Sección galería */
+/* Sección Galería */
 .imagen {
   text-align: center;
-  padding: 20px;
-}
-.imagen h1 {
-  color: #ff9800;
-  margin-bottom: 10px;
+  padding: 30px;
 }
 
-/* Contenedor general */
+.imagen h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.imagen p {
+  max-width: 800px;
+  margin: 0 auto 30px;
+  font-size: 14px;
+  color: #444;
+}
+
+/* Galería grid */
 .galeria {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 20px;
-  padding: 20px;
+  gap: 25px;
+  padding: 20px 40px;
+  justify-items: center;
 }
 
-/* Cada tarjeta */
+/* Tarjetas */
 .card-perro {
   background: white;
   border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   overflow: hidden;
-  transition: transform 0.2s;
+  text-align: center;
+  transition: transform 0.3s;
 }
+
 .card-perro:hover {
   transform: scale(1.05);
 }
 
 /* Imagen */
 .card-perro img {
-  width: 100%;
-  height: 200px;
+  width: 220px;
+  height: 220px;
   object-fit: cover;
+  border-radius: 15px;
+  display: block;
+  margin: 0 auto;
 }
 
-/* Info */
-.card-perro .info {
-  padding: 15px;
-  text-align: left;
-}
-.card-perro .info h2 {
-  margin: 0 0 10px;
-  color: #333;
-}
-.card-perro .info p {
-  margin: 5px 0;
-  color: #555;
+/* Nombre debajo */
+.card-perro h2 {
+  margin-top: 8px;
+  font-size: 16px;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
 }
