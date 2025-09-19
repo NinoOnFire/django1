@@ -1,14 +1,15 @@
-{% load static %}
-
 <!DOCTYPE html>
+{% load static %}
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Registro</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}?v=2">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mis Perris</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}?v=1">
 </head>
 <body>
-      <nav>
+
+  <nav>
     <h1>🐾 Mis Perris</h1>
     <ul>
       <li><a href="{% url 'inicio' %}">Inicio</a></li>
@@ -18,6 +19,7 @@
     </ul>
   </nav>
 
+  <!-- SECCIÓN DE PORTADA -->
     <header class="hero">
         <div class="hero-text">
             <h1>Mascotas Felices en Mis Perris</h1>
@@ -25,14 +27,5 @@
             <a href="#" class="btn">Leer Más</a>
         </div>
     </header>
-  <h2>Crear cuenta</h2>
-    <div class="form-container">
-        <h2>Registro de Usuario</h2>
-        <form method="post">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit">Registrarme 🐾</button>
-        </form>
-    </div>
-</body>
+
 </html>

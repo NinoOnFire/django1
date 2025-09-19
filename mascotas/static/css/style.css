@@ -181,3 +181,105 @@ nav ul li a:hover {
   position: relative;
   z-index: 1; /* para que el texto no quede debajo de la sombra */
 }
+
+/* Formulario de registro */
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fdfdfd;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor del formulario */
+.form-container {
+    max-width: 400px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* Título */
+.form-container h2 {
+    margin-bottom: 20px;
+    color: #444;
+    font-size: 1.8rem;
+}
+
+/* Campos del formulario */
+.form-container label {
+    display: block;
+    text-align: left;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-container input,
+.form-container select,
+.form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: 0.3s ease;
+}
+
+/* Efecto cuando se selecciona el input */
+.form-container input:focus,
+.form-container select:focus,
+.form-container textarea:focus {
+    border-color: #ff6600;
+    outline: none;
+    box-shadow: 0 0 6px rgba(255,102,0,0.3);
+}
+
+/* Botón */
+.form-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff6600;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.form-container button:hover {
+    background-color: #e65c00;
+}
+
+/* Mensajes de error Django */
+.errorlist {
+    color: red;
+    font-size: 0.9rem;
+    list-style: none;
+    margin: 5px 0;
+    padding: 0;
+}
+
+.mapa {
+    text-align: center;
+    margin: 40px auto;
+    max-width: 900px;
+}
+
+.mapa h2 {
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.map-container {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}

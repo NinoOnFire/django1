@@ -8,7 +8,11 @@ def galeria(request):
     data = {'mascotas': mascotas }
     return render(request, 'galeria.html', data)
 
+def inicio(request):
+    return render(request, 'inicio.html')
 
+def nosotros(request):
+    return render(request, 'nosotros.html')
 
 
 def registro(request):
